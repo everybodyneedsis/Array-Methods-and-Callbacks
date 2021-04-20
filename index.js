@@ -47,7 +47,7 @@ function getFinals(data){
     return madeFinals;
 }
 
-console.log(getFinals());
+console.log('task2', getFinals());
 
 
 
@@ -57,14 +57,14 @@ Use the higher-order function called getYears to do the following:
 2. Receive a callback function getFinals from task 2 
 3. Return an array called years containing all of the years in the getFinals data set*/
 
-function getYears(arr, getFinals) {
+function getYears(array, getFinals) {
     const years = getFinals.filter(function(item){
         return item.Year;
     });
     return years;
 }
 
-console.log(getYears());
+console.log('task 3', getYears());
 
 
 
