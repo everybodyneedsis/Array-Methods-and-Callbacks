@@ -79,8 +79,7 @@ function getWinners(getFinalsCB) {
     const winner = getFinalsCB.map(item => {
      return   item["Home Team Goals"] > item [ "Away Team Goals"] ?item ["Home Team Name"]:
      item["Away Team Name"];
-
-})
+});
 return winner
 }
 
@@ -104,8 +103,7 @@ function getWinnersByYear(data,getyearsCB, getwinnersCB){
     return winner.map(function(item,index){ 
     /* (`In ${years[i]} ${winners[i]} won the world cup `)*/
     return `In ${years[index]}, ${item} won the world cup!`;
-    })
-    
+    });
     }
 
 
@@ -122,16 +120,13 @@ Use the higher order function getAverageGoals to do the following:
 
 function getAverageGoals( getFinalsCB) {
 
-    const away = awayteamGoals.reduce((add, current) =>{
+    const away = awayteamGoals.reduce((add, current) => {
     return add + current.HomeTeamGoals;
     }, 0);
     
-    const home = hometeamGoals.reduce((add, current) =>{
+    const home = hometeamGoals.reduce((add, current) => {
     return add + current.AwayTeamGoals;
     }, 0);
-    
-    
-    
     }
     
     console.log(getAverageGoals());
